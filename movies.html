@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Trending Movies</title>
   <link rel="stylesheet" href="movie.css" />
+  <script src="movie.js"></script>
 </head>
 <body>
 
@@ -12,6 +13,8 @@
     <span class="trending-text">Trending Now on Netflix</span>
     <img class="xman" src="assets/images/logo.svg" alt="Logo" />
   </div>
+<div class="carousel-wrapper">
+<button class="scroll-btn left" id="scrollLeft">‹</button>
 
   <div class="trending-wrapper">
     <div class="scroll-container" id="trendingList">
@@ -28,6 +31,8 @@
         <div class="card"><span class="rank">10</span><img src="assets/images/s.jpeg" alt="Sikandar"></div>
       </div>
     </div>
+  </div>
+  <button class="scroll-btn right" id="scrollRight">›</button>
   </div>
 
 </body>

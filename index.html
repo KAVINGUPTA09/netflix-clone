@@ -18,7 +18,17 @@
         <span><img src="assets/images/logo.svg" alt="Logo" /></span>
         <div>
           
-          <button class="lang-btn">English</button>
+<div class="language-selector">
+  <button class="lang-btn" id="langToggle">
+    🌐 English ▼
+  </button>
+  <ul class="dropdown" id="langDropdown">
+    <li><a href="#">English</a></li>
+    <li><a href="#">हिन्दी</a></li>
+  </ul>
+</div>
+
+
           <a href="signin.html">
           <button class="sign-btn">Sign In</button>
           </a>
@@ -168,40 +178,56 @@
     <div class="separation"></div>
 
     <!-- Footer -->
-    <footer>
-      <div class="questions">
-        Questions? Call 000-800-919-1694
-      </div>
+<footer>
+  <div class="questions">
+    Questions? Call 000-800-919-1694
+  </div>
 
-      <div class="footer">
-        <div class="footer-item">
-          <a href="#">Investor Relations</a>
-          <a href="#">Jobs</a>
-          <a href="#">Ways to Watch</a>
-          <a href="#">Terms of Use</a>
-        </div>
+  <div class="footer">
+    <div class="footer-item">
+      <a href="#">Investor Relations</a>
+      <a href="#">Jobs</a>
+      <a href="#">Ways to Watch</a>
+      <a href="#">Terms of Use</a>
+    </div>
 
-        <div class="footer-item">
-          <a href="#">Help Centre</a>
-          <a href="#">Account</a>
-          <a href="#">Speed Test</a>
-          <a href="#">Legal Notices</a>
-        </div>
+    <div class="footer-item">
+      <a href="#">Help Centre</a>
+      <a href="account.html">My Account</a> <!-- ✅ Added link here -->
+      <a href="#">Speed Test</a>
+      <a href="#">Legal Notices</a>
+    </div>
 
-        <div class="footer-item">
-          <a href="#">Media Centre</a>
-          <a href="#">Privacy</a>
-          <a href="#">Cookie Preferences</a>
-          <a href="#">Corporate Information</a>
-        </div>
+    <div class="footer-item">
+      <a href="#">Media Centre</a>
+      <a href="#">Privacy</a>
+      <a href="#">Cookie Preferences</a>
+      <a href="#">Corporate Information</a>
+    </div>
 
-        <div class="footer-item">
-          <a href="#">Contact Us</a>
-          <a href="#">Speed Test</a>
-          <a href="#">Legal Notices</a>
-          <a href="#">Only on Netflix</a>
-        </div>
-      </div>
-    </footer>
-  </body>
+    <div class="footer-item">
+      <a href="#">Contact Us</a>
+      <a href="#">Speed Test</a>
+      <a href="#">Legal Notices</a>
+      <a href="#">Only on Netflix</a>
+    </div>
+  </div>
+</footer>
+<script>
+  const langBtn = document.getElementById('langToggle');
+  const langDropdown = document.getElementById('langDropdown');
+
+  langBtn.addEventListener('click', (e) => {
+    e.stopPropagation(); // prevent click bubbling
+    langDropdown.classList.toggle('show');
+  });
+
+  // Close dropdown if clicked outside
+  window.addEventListener('click', () => {
+    langDropdown.classList.remove('show');
+  });
+</script>
+
+  
+</body>
 </html>
